@@ -1,0 +1,26 @@
+<title>Login Page</title>
+<script type="text/javascript">
+    var id = "easy1004"; //ID
+    var pw = "112233"; //PW
+ 
+    var user_id = prompt("ID : ", ""); //방문자 아이디 입력 받기
+    var user_pw = prompt("PW : ", ""); //방문자 비밀번호 입력 받기
+
+    if (id == user_id) {
+
+        if(pw == user_pw) {
+        
+            document.write(user_id + "님 반갑습니다!");
+        } 
+            else { //비밀번호 일치하지 않는 경우
+                alert("비밀번호가 일치하지 않습니다.");
+                location.reload(); //브라우저 새로고침
+            }
+
+    } 
+    else { //아이디가 일치하지 않는 경우
+        alert("아이디가 일치하지 않습니다.");
+        location.reload(); //브라우저 새로고침
+    }
+
+</script>

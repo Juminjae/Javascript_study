@@ -1,0 +1,22 @@
+<title>Switch</title>
+<script type="text/javascript">
+
+    var site = prompt("네이버, 다음, 구글 중 즐겨 사용하는 포털 사이트?", "");
+    var url;
+
+    switch(site){
+        case "네이버" : url="www.naver.com"; //네이버 입력
+        break;
+
+        case "다음" : url="www.daum.net"; //다음 입력
+        break;
+
+        case "구글" : url="www.google.com"; //구글 입력
+        break;
+    
+    default: alert("보기 중에 없는 사이트입니다.");
+    }
+
+    if(url) location.href="http://"+url;
+
+</script>
