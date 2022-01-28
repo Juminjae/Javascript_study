@@ -1,0 +1,13 @@
+<script type="text/javascript">
+    function avgWeight(height, weight){
+        avg = (height - 100)*0.9;
+        document.write("적정 몸무게는"+avg+"kg입니다. <br/>");
+
+        if (weight <= avg){
+            document.write("적정 몸무게 이하입니다.");
+        } else {
+            document.write("적정 몸무게 이상입니다.");
+        }
+    }
+    avgWeight(180, 74);
+</script>

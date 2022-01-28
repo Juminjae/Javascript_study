@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<head>
+<script type="text/javascript">
+    function chColor(){
+        var arrColor = ["#ff0", "#6c0", "#fcf", "#cf0", "#39f"];
+        var arrNum = Math.floor(Math.random()*arrColor.length);
+        var bodyTag = document.getElementsByTagName("body")[0];
+        bodyTag.style.backgroundColor = arrColor[arrNum];
+    }
+</script>
+</head>
+<body>
+    <button onclick="chColor();">배경 색상 바꾸기</button>
+</body>
+</html>
