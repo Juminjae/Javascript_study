@@ -1,0 +1,21 @@
+<script type="text/javascript">
+    window.onload = function (){
+        function fnc1(){
+            alert('실행문1');
+        }
+        function fnc2(){
+            alert('실행문2');
+        }
+        var myBtn = document.getElementById("btn");
+        if (window.addEventListener){
+            myBtn.addEventListener("click",fnc1,false);
+            myBtn.addEventListener("click",fnc2,false);
+        } else {
+            myBtn.attachEvent("onclick",fnc1);
+            myBtn.attachEvent("onclick",fnc2);
+        }
+    }
+</script>
+<body>
+    <button id="btn">버튼</button>
+</body>
