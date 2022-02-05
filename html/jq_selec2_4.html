@@ -1,0 +1,19 @@
+<script type="text/javascript">
+    $(function(){
+        $("li:nth-child(3n)").css("backgroundd-color","yellow");
+        $("li:nth-last-of-type(2)").css("background-color","pink");
+    });
+</script>
+<body>
+    <h1>탐색 선택자</h1>
+    <ul>
+        <li>내용1</li>
+        <li>내용2</li> <!--li:nth-last-of-type(2) 사용 시 선택됨.-->
+        <li>내용3</li> <!--li:nth-child(3n) 사용 시 선택됨.-->
+    </ul>
+    <ul>
+        <li>내용4</li>
+        <li>내용5</li> <!--li:nth-last-of-type(2) 사용 시 선택됨.-->
+        <li>내용6</li> <!--li:nth-child(3n) 사용 시 선택됨.-->
+    </ul>
+</body>
