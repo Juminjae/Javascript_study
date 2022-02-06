@@ -1,0 +1,26 @@
+<script type="text/javascript">
+    $(function(){
+        $("a[title]").css("background-color", "yellow");
+        $("a [href='http://www.naver.com']").css("background-color", "pink");
+        $("a[href^='mailto']").css("background-color", "aqua");
+        $("a[href$='net']").css("background-color", "purple");
+        $("a[href*='google']").css("background-color", "orange");
+    });
+</script>
+<body>
+    <h1>탐색 선택자</h1>
+    <ul>
+        <li>
+            <a href="http://www.naver.com" title="네이버 이동">네이버</a>
+        </li>
+        <li>
+            <a href="mailto:ciycc@naver.com">관리자에게</a>
+        </li>
+        <li>
+            <a href="http://www.daum.net">다음</a>
+        </li>
+        <li>
+            <a href="http://www.google.com">구글</a>
+        </li>
+    </ul>
+</body>
