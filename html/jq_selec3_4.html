@@ -1,0 +1,17 @@
+<script type="text/javascript">
+       $(function(){
+              $("#txt").text($("#wrap img").attr("src"));
+              $("#wrap img").attr("width","200");
+              $("#box img").removeAttr("border");
+       });
+</script>
+<body>
+       <h1>객체 조작 및 생성</h1>
+       <p id="wrap">
+              <img src="images/math_img_1.jpg" alt="가위" width="100"/>
+       </p>
+       <p id="txt"></p>
+       <p id="box">
+              <img src="images/math_img_3.jpg" alt="보" width="100" bord="2"/>
+       </p>
+</body>
