@@ -1,0 +1,12 @@
+<script type="text/javascript">
+       $(function(){
+              $("<li>새 내용 추가1</li>").insertBefore("#myList");
+              var copy_obj = $("#myList").clone();
+              $(copy_obj).insertAfter("#myList");
+       });
+</script>
+<body>
+       <ul>
+              <li id="myList">내용</li>
+       </ul>
+</body>
