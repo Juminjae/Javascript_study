@@ -1,0 +1,18 @@
+<script type="text/javascript">
+       $(function(){
+              $("#btn1").click(function(){
+                     $("p").css("background-color", "yellow");
+              });
+
+              $("#btn2").dblclick(function(){
+                     $("p").css("background-color", "purple");
+              });
+
+              $("#btn2").dblclick();
+       });
+</script>
+<body>
+       <button id="btn1">click</button>
+       <button id="btn2">dblclick</button>
+       <p>내용</p>
+</body>
