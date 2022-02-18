@@ -1,0 +1,24 @@
+<script type="text/javascript">
+    $(function(){
+        $("#user_id").keydown(function(e){
+            $(this).css("background-color","purple");
+            $("#txt1").text(e.keyCode);
+        });
+        $("#user_id").keypress(function(e){
+            $("#txt2").text(e.keyCode);
+        });
+        $("user_id").keyup(function(){
+            $(this).css("background-color", "yellow");
+        });
+    });
+</script>
+<style type="text/css">
+    #user_id{ime-mode: disabled;}
+</style>
+<body>
+    <p>
+        <input type="text" name="user_id" id="user_id"/>
+    </p>
+    <p id="txt1"></p>
+    <p id="txt2"></p>
+</body>
