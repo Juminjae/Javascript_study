@@ -1,0 +1,15 @@
+<script type="text/javascript">
+    $(function(){
+        $("#btn1").mouseover(function(){
+            alert("good");
+        });
+
+        $("#btn2").on("mouserover focus", function(){
+            alert("hello");
+        });
+    });
+</script>
+<body>
+    <p><a href="#" id="btn1">버튼1</a></p>
+    <p><a href="#" id="btn2">버튼2</a></p>
+</body>

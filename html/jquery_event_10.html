@@ -1,0 +1,12 @@
+<script type="text/javascript">
+    $(window).scroll(function(){
+        $("#txt").text($(this).scrollTop());
+    });
+</script>
+<style type="text/css">
+    body{height: 3000px;}
+    #txt{position: fixed; top: 10px; left: 10px;}
+</style>
+<body>
+    <p id="txt"></p>
+</body>
