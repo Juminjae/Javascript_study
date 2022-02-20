@@ -1,0 +1,23 @@
+<script type="text/javascript">
+       $(function(){
+              $("h1 a").on({
+                     "mouseover focus":function(){
+                            $(this).css("color","red");
+                     },
+                     "mouseout blur":function(){
+                            $(this).css("color", "yellow");
+                     }
+              });
+              $("h2 a").on("mouseover focus", function(){
+                     $(this).css("background-color","yellow");
+              });
+              $(document).on("mouseout blur", "h2 a", function(){
+                     $(this).css("background-color", "aqua");
+              });
+              $("h2").append("<a href='#'>생성된 요소</a>");
+       });
+</script>
+<body>
+       <h1><a href="#">버튼</a></h1>
+       <h2></h2>
+</body>

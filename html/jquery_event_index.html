@@ -1,0 +1,21 @@
+<script type="text/javascript">
+       $(function(){
+              $("#menu a").mouseover(function(){
+                     $("#menu a").css("background","none");
+
+                     $(this).css("background","yellow");
+
+                     var num = $("#menu a").index(this);
+                     $(".txt").text(num);
+              });
+       });
+</script>
+<body>
+       <ul id="menu">
+              <li><a href="#">내용1</a></li>
+              <li><a href="#">내용2</a></li>
+              <li><a href="#">내용3</a></li>
+              <li><a href="#">내용4</a></li>
+       </ul>
+       <p class="txt"></p>
+</body>
