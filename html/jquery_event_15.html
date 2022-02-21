@@ -1,0 +1,15 @@
+<script type="text/javascript">
+       $(function(){
+              $("h1 a").on("mouseover focus",function(){
+                     $(this).css("background-color","yellow");
+              });
+              $("button").on("click",function(){
+                     $("h1 a").css("background-color","none");
+                     $("h1 a").off();
+              });
+       });
+</script>
+<body>
+       <h1><a href="#">내용</a></h1>
+       <button>이벤트 삭제</button>
+</body>

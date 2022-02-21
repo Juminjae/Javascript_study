@@ -1,0 +1,11 @@
+<script type="text/javascript">
+       $(function(){
+              $("h1").delegate("a","mouseover focus", function(){
+                     $(this).css("background-color", "yellow");
+              });
+              $("h1").html("<a href='#'>내용</a>");
+       });
+</script>
+<body>
+       <h1></h1>
+</body>
