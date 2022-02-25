@@ -1,0 +1,15 @@
+<script type="text/javascript">
+    $(function(){
+        $("#btn1").on("click", function(){
+            $("h1").hide(1000, function(){ alert("숨김 완료!") });
+        });
+        $("#btn2").on("click", function(){
+            $("h1").show("slow", function(){ alert("노출 완료!") });
+        });
+    });
+</script>
+<body>
+    <button id="btn1">Hide</button>
+    <button id="btn2">Show</button>
+    <h1>내용</h1>
+</body>

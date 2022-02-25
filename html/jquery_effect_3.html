@@ -1,0 +1,19 @@
+<script type="text/javascript">
+    $(function(){
+        $("#btn1").on("click",function(){
+            $("h1").fadeOut(1000);
+        });
+        $("#btn2").on("click", function(){
+            $("h1").fadeIn("slow");
+        });
+        $("#btn3").on("click", function(){
+            $("h1").fadeToggle("fast");
+        });
+    });
+</script>
+<body>
+    <button id="btn1">fadeOut</button>
+    <button id="btn2">fadeIn</button>
+    <button id="btn3">fadeToggle</button>
+    <h1>내용</h1>
+</body>
