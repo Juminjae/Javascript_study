@@ -1,0 +1,20 @@
+<script type="text/javascript">
+    $(function(){
+        $("h1").animate({
+            marginLeft: "250px"
+        },3000);
+
+        $("h2").delay(1000).animate({
+            marginLeft:"250px"
+        },3000);
+
+        $("#stopBtn").on("click", function(){
+            $("h1").stop();
+        });
+    });
+</script>
+<body>
+    <button id="stopBtn">stop</button>
+    <h1>내용</h1>
+    <h2>내용</h2>
+</body>
