@@ -1,0 +1,67 @@
+<script type="text/javascript">
+    $(function(){
+        var list = $("#banner");
+        var show_num = 3;
+        var num = 0;
+        var total = $(">li", list).size();
+        var li_width = $("li:first", list).width();
+
+        var copyObj = $(">li:lt("+show_num+")",list).clone();
+        list.append(copyObj);
+
+        $(".next").on("click", function(){
+            if(num==total){
+                num = 0;
+                list.css("margin-left", num);
+            }
+            num++;
+            list.stop().animate({marginLeft:-li_width*num+"px"},500);
+            return false;
+        });
+
+        $(".prev").on("click", function(){
+            if(num==0){
+                num=total;
+                list.css("margin-left",-num*li_width*num+"px",500);
+                return false;
+            }
+            num--;
+            list.stop().animate({marginLeft:-li_width*num+"px"},500);
+            return false;
+        });
+    });
+</script>
+<style type="text/css">
+    *{margin: 0; padding: 0;}
+    img{border: none; vertical-align: top;}
+    li{list-style: none; float: left; width: 80px;}
+    h1{text-align: center;}
+    #banner_wrap{width: 260px; padding: 10px 20px;
+    margin: 0 auto; border: 1px solid #aaa}
+    #banner{width: 5000px;}
+    #frame{width: 232px; overflow: hidden;
+    position: relative; margin: 10px auto;}
+    
+</style>
+<body>
+    <h1>롤링 슬라이드 배너 만들기</h1>
+    <div id="banner_wrap">
+        <div id="frame">
+            <ul id="banner">
+                <li><a href="#"><img src="images/pic_t1.jpg" alt="사진1"/></a></li>
+                <li><a href="#"><img src="images/pic_t2.jpg" alt="사진2"/></a></li>
+                <li><a href="#"><img src="images/pic_t3.jpg" alt="사진3"/></a></li>
+                <li><a href="#"><img src="images/pic_t4.jpg" alt="사진4"/></a></li>
+                <li><a href="#"><img src="images/pic_t5.jpg" alt="사진5"/></a></li>
+            </ul>
+        </div>
+        <p>
+            <a href="#" class="prev">
+                <img src="images/prev_btn.png" alt="이전 버튼"/>
+            </a>
+            <a href="#" class="next">
+                <img src="images/next_btn.png" alt="다음 버튼"/>
+            </a>
+        </p>
+    </div>
+</body>
