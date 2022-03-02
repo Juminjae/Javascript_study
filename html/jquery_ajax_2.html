@@ -1,0 +1,30 @@
+<script type="text/javascript">
+    $(function(){
+        $("#member").on("submit", function(){
+            var d = $(this).serialize();
+
+            $.ajax({
+                url:"member.php",
+                type:"post",
+                data:d,
+                success:function(result){
+                    $("#txt1").text(result);
+                }
+            });
+            return false;
+        })
+    })
+</script>
+<body>
+    <form action="member.php" method="post" name="member" id="member">
+        <fieldset>
+            <legend>회원가입</legend>
+            <p>
+                <label for="user_name">이름</label>
+                <input type="text" name="user_name" id="user_name"/>
+            </p>
+            <p><input type="submit" value="확인"/></p>
+        </fieldset>
+    </form>
+    <h1 id="txt1"></h1>
+</body>
