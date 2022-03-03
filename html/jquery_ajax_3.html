@@ -1,0 +1,23 @@
+<script type="text/javascript">
+       $(function(){
+              $.ajax({
+                     url:"rank.xml",
+                     dataType:"xml",
+                     success:function(result){
+                            if($(result).find("rank").length>0){
+                                   $(result).find("rank").each(function(){
+                                          var name = $(this).find("k").text();
+                                          var result ="<li>"+name+"</li>";
+                                          $("#wrap ol").append(result);
+                                   });
+                            }
+                     }
+              });
+       });
+</script>
+<body>
+       <h1>인기 검색어</h1>
+       <div id="wrap">
+              <ol></ol>
+       </div>
+</body>
