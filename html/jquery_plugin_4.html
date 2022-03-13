@@ -1,0 +1,81 @@
+<head>
+       <title>Swipe 2</title>
+       <meta http-equiv="X-UA-Compatible" content="IE=8">
+       <meta name="viewport" content="width=device-width", initial-scale="1.0, maximum-scale=1.0"/>
+       <style type="text/css">
+              .swipe{
+                     overflow: hidden;
+                     visibility: hidden;
+                     position: relative;
+              }
+
+              .swipe-wrap{
+                     overflow: hidden;
+                     position: relative;
+              }
+
+              .swipe-wrap>li{
+                     float: left;
+                     width: 100%;
+                     position: relative;
+              }
+
+              li{
+                     list-style: none;
+              }
+
+              img{
+                     width: 100%;
+                     max-width: 100%;
+              }
+
+              #mySwipe{
+                     max-width: 500px;
+                     margin: 0 auto;
+              }
+
+              .btn_wrap{
+                     text-align: center;
+                     padding-top: 20px;
+              }
+       </style>
+       <link href='css/style.css' rel='stylesheet'/>
+       <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+       <script src="js/swipe.js"></script>
+       <script type="text/javascript">
+              $(function(){
+                     window.mySwipe = $("#mySwipe").Swipe({
+                            startSlide: 0,
+                            auto: 3000,
+                            continuous: true,
+                            disableScroll: true,
+                            stopPropagation: true,
+                            callback: function(index, element){},
+                            TransitionEn: function(index, element) {}
+                     }).data('Swipe');
+
+                     $(".prevBtn").on("click", function(){
+                            mySwipe.prev();
+                     });
+
+                     $(".nextBtn").on("click", function(){
+                            mySwipe.next();
+                     });
+              });
+       </script>
+</head>
+<body>
+       <h1>Swipe 2</h1>
+       <div id="mySwipe" class="swipe">
+              <ul class="swipe-wrap">
+                     <li><img src="images/pic_1.jpg" alt="사진 1"/></li>
+                     <li><img src="images/pic_2.jpg" alt="사진 2"/></li>
+                     <li><img src="images/pic_3.jpg" alt="사진 3"/></li>
+                     <li><img src="images/pic_4.jpg" alt="사진 4"/></li>
+              </ul>
+       </div>
+       <div class="btn_wrap">
+              <button class="prevBtn">prev</button>
+              <button class="nextBtn">next</button>
+       </div>
+</body>
